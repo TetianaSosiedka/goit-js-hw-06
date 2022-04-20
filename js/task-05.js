@@ -5,12 +5,12 @@ const refs = {
   input: document.querySelector("#name-input"),
   output: document.querySelector("#name-output"),
 };
-const input = document.querySelectorAll("#name-input");
 
 refs.input.addEventListener("input", setText);
 
 function setText(event) {
-  event.currentTarget.value !== ""
-    ? (refs.output.textContent = event.currentTarget.value)
+  const text = event.currentTarget.value.trim();
+  text !== ""
+    ? (refs.output.textContent = text)
     : (refs.output.textContent = "Anonymous");
 }
