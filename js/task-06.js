@@ -30,7 +30,7 @@ function removeClass() {
 }
 
 function checkLengsInputValue(event) {
-  const string = event.currentTarget.value;
+  const string = event.currentTarget.value.trim();
   if (string.length === Number(inputLength)) {
     input.classList.add("valid");
   } else input.classList.add("invalid");
