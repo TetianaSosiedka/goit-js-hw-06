@@ -7,6 +7,6 @@ const refs = {
   span: document.querySelector("#text"),
 };
 
-refs.input.addEventListener("change", (event) => {
+refs.input.addEventListener("input", (event) => {
   refs.span.style.fontSize = `${event.currentTarget.value}px`;
 });
