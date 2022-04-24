@@ -20,9 +20,8 @@ const images = [
 //Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
 
 const makeGallaryListMarkup = ({ url, alt }) => {
-  return `<li><img src = ${url} alt = ${alt}></li>`;
+  return `<li><img src = '${url}' alt = '${alt}'></li>`;
 };
-
 const makeGallaryList = images.map(makeGallaryListMarkup).join("");
 
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
@@ -31,4 +30,6 @@ galleryUl.insertAdjacentHTML("beforeend", makeGallaryList);
 
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 const galleryElementList = galleryUl.children;
-[...galleryElementList].map((li) => li.classList.add("item"));
+[...galleryElementList].map((li) => {
+  li.classList.add("item");
+});
