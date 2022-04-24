@@ -32,9 +32,9 @@ function createContainer(height, width) {
   refs.boxes.append(container);
 }
 
+let height = 30;
+let width = 30;
 function createBoxes(amount) {
-  let height = 30;
-  let width = 30;
   for (let i = 0; i < amount; i += 1) {
     createContainer(`${height}px`, `${width}px`);
     height += 10;
@@ -44,4 +44,6 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   refs.boxes.innerHTML = "";
+  height = 30;
+  width = 30;
 }
